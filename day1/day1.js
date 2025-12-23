@@ -21,14 +21,14 @@ const students = [
 // print all students name
 console.log('List of All Students: ');
 
-for(student of students){
+for(let student of students){
     // console.log(`Name: ${student['name']}`);
     console.log(`Name: ${student.name}`);
 }
 
 // list of those students who pass (marks >= 60)
 console.log('List of Those Students who have marks >= 60: ');
-for(student of students){
+for(let student of students){
     if(student.marks >= 60){
         console.log(`Name: ${student.name}`);
         
@@ -36,29 +36,24 @@ for(student of students){
 }
 
 // highest marks of student
-console.log('Highest Marks student: ');
-let highestMarks = students[0].marks;
-for(student of students){
-    if(student.marks > highestMarks){
-        highestMarks = student.marks;
+console.log('Topper student: ');
+let topper = students[0];
+for(let student of students){
+    if(student.marks > topper.marks){
+        topper = student;
     }
 }
-console.log(highestMarks);
+console.log(topper.name, topper.marks);
 
 // write a function checkEvenOdd
 
 function checkEvenOdd(num){
-    if((num % 2) === 0 ){
-        console.log('even');
-        
-    }else{
-        console.log('odd');
-        
-    }
+    return num % 2 === 0 ? 'even' : 'odd';
 }
 
-checkEvenOdd(7); // odd
-checkEvenOdd(10); // even
+console.log(checkEvenOdd(7)); // odd
+console.log(checkEvenOdd(10)); // odd
+
 
 
 
