@@ -44,6 +44,7 @@ const user = {
     console.log(this.age);
   }
 };
-
-user.normal(); // undefined
-user.arrow();  // 25
+console.log('normal');
+user.normal(); // 25
+console.log('arrow');
+user.arrow();  // undefined
